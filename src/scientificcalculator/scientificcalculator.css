@@ -1,0 +1,68 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+
+.digifont{
+    -fx-font-family: Digital-7;
+    -fx-color: black;
+    -fx-padding: 1;
+}
+.textField{
+    /*-fx-background-color: white;*/
+    -fx-font-size: 50px;
+    /*-fx-font-family: sans-serif;*/
+    /*-fx-font-weight: bold;*/
+}
+.numButton{
+    -fx-background-color:#999999 ;
+    -fx-background-radius: 5 5 10 10;
+    -fx-font-size: 16px;
+    -fx-font-family: sans-serif;
+    -fx-font-weight: bold;
+    -fx-padding: 0;
+}
+.modeButton{
+   
+    -fx-background-radius: 10 10 10 10;
+    -fx-font-size: 12px;
+    -fx-font-family: sans-serif;
+    -fx-font-weight: bold;
+    -fx-padding: 0;
+}
+.modeColor{
+    -fx-background-color:#cccccc ;
+}
+.shiftModeColor{
+     -fx-background-color: goldenrod ;
+}
+
+.sciButton{
+    -fx-background-color:#040424 ;
+    -fx-background-radius: 5 5 5 5;
+    -fx-font-size: 12px;
+    -fx-font-family: sans-serif;
+    -fx-font-weight: bold;
+    -fx-padding: 0;
+
+}
+.delac{
+    -fx-background-color:#a3446a ;
+    -fx-background-radius: 5 5 10 10;
+    -fx-font-size: 16px;
+    -fx-font-family: sans-serif;
+    -fx-font-weight: bold;
+    -fx-padding: 0;
+}
+.anchorPane{
+    -fx-background-radius: 25 25 50 50;
+    -fx-background-color: #0d1e33;
+}
+.borderpane{
+    -fx-background-radius: 20 20 50 50;
+    -fx-background-color:#cccccc ;
+    /*-fx-margin: 200 200 200 200;*/
+}
