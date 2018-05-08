@@ -87,8 +87,7 @@ public class ScientificCalculatorController implements Initializable {
         Text mode = new Text("DRG");
 
         typeField = new JFXTextField();
-        typeField.getStyleClass().add("textField");
-        typeField.getStyleClass().add("digifont");
+        typeField.getStyleClass().add("typefont");
         typeField.setFocusColor(Color.WHITE);
         typeField.setUnFocusColor(Color.WHITE);
         typeField.setFocusTraversable(false);
@@ -97,8 +96,7 @@ public class ScientificCalculatorController implements Initializable {
         result = new JFXTextField();
         result.setFocusTraversable(false);
         result.setEditable(false);
-        result.getStyleClass().add("textField");
-        result.getStyleClass().add("digifont");
+        result.getStyleClass().add("resultfont");
         result.setFocusColor(Color.WHITE);
         result.setUnFocusColor(Color.WHITE);
         result.setNodeOrientation(NodeOrientation.RIGHT_TO_LEFT);
@@ -170,6 +168,10 @@ public class ScientificCalculatorController implements Initializable {
         });
 
         JFXButton center = new JFXButton("REPLAY");
+        center.setTextFill(Color.DARKGREY);
+        center.getStyleClass().add("replay");
+        center.setPrefWidth(panelBox.getPrefWidth());
+        center.setPadding(new Insets(1));
 
         JFXButton top = new JFXButton();
         top.setButtonType(JFXButton.ButtonType.RAISED);
@@ -971,7 +973,7 @@ public class ScientificCalculatorController implements Initializable {
             typeField.appendText("6");
         });
 
-        JFXButton mul = new JFXButton("X");
+        JFXButton mul = new JFXButton("x");
         mul.setButtonType(JFXButton.ButtonType.RAISED);
         mul.getStyleClass().add("numButton");
         mul.setTextFill(Color.WHITE);
@@ -983,7 +985,7 @@ public class ScientificCalculatorController implements Initializable {
                 typeField.setText("");
                 calculted = false;
             }
-            typeField.appendText("X");
+            typeField.appendText("x");
         });
 
         JFXButton divide = new JFXButton("÷");
@@ -1233,7 +1235,7 @@ public class ScientificCalculatorController implements Initializable {
     }
 
     public String solvePower(String calculate) {
-        String[] parts = calculate.split("(?=[/X-÷+^])|(?<=[/X÷*-+^])");
+        String[] parts = calculate.split("(?=[/x-÷+^])|(?<=[/x÷*-+^])");
         String solvedPow = null;
         for (int i = 0; i < parts.length; i++) {
             if (parts[i].equals("^")) {
@@ -1241,6 +1243,7 @@ public class ScientificCalculatorController implements Initializable {
                 int right = Integer.parseInt(parts[i + 1]);
                 solvedPow = "" + (Math.pow(left, right));
                 calculate = calculate.replace("" + parts[i - 1] + parts[i] + parts[i + 1], solvedPow);
+//                System.out.println(calculate);
                 break;
             }
         }
@@ -1256,7 +1259,7 @@ public class ScientificCalculatorController implements Initializable {
                 replace("÷", "/").
                 replace("%", "*1/100").
                 replace("π", "Math.PI").
-                replace("X", "*");
+                replace("x", "*");
 
         ScriptEngine engine = new ScriptEngineManager().getEngineByExtension("js");
 
@@ -1281,6 +1284,9 @@ public class ScientificCalculatorController implements Initializable {
             solveInverse();
             return;
         }
+        if (calculate.contains("^")) {
+            calculate = solvePower(calculate);
+        }
         calculate = calculate.replace("sin-1", "Math.asin(").
                 replace("cos-1", "Math.acos(").
                 replace("tan-1", "Math.atan(").
@@ -1290,6 +1296,9 @@ public class ScientificCalculatorController implements Initializable {
                 replace("√", "Math.sqrt").
                 replace("π", "Math.PI").
                 replace(")", "*Math.PI)/180)").
+                replace("÷", "/").
+                replace("%", "*1/100").
+                replace("x", "*").
                 replace("log", "Math.log(");
         System.out.println(calculate);
 
@@ -1313,15 +1322,22 @@ public class ScientificCalculatorController implements Initializable {
 
     public void solveInverse() {
         String calculate = typeField.getText();
+        if (calculate.contains("^")) {
+            calculate = solvePower(calculate);
+        }
         calculate = calculate.replace("sin-1", "180/Math.PI*(Math.asin").
                 replace("cos-1", "180/Math.PI*(Math.acos").
                 replace("tan-1", "180/Math.PI*(Math.atan").
                 replace("√", "Math.sqrt").
                 replace("π", "Math.PI").
                 replace(")", "))").
+                replace("÷", "/").
+                replace("%", "*1/100").
+                replace("x", "*").
                 replace("log", "Math.log(");
-        
-       
+                System.out.println(calculate);
+
+
         ScriptEngine engine = new ScriptEngineManager().getEngineByExtension("js");
 
         try {

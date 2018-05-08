@@ -6,16 +6,17 @@
 
 }
 
-.digifont{
+.resultfont{
     -fx-font-family: Digital-7;
     -fx-color: black;
+    -fx-font-size: 50px;
     -fx-padding: 1;
 }
-.textField{
-    /*-fx-background-color: white;*/
+.typefont{
+    -fx-font-family: Digital-7;
+    -fx-color: black;
     -fx-font-size: 50px;
-    /*-fx-font-family: sans-serif;*/
-    /*-fx-font-weight: bold;*/
+    -fx-padding: 1;
 }
 .numButton{
     -fx-background-color:#999999 ;
