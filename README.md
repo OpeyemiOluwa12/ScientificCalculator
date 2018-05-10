@@ -1,7 +1,7 @@
 # Scientific Calculator
 This scientific calculator is a standard school calculator  built in java FX and it almost a replica of the casio fx-82ms calculator with the some features and functionalities.
 
-<img src ="https://github.com/OpeyemiOluwa12/ScientificCalculator/blob/master/src/scientificcalculator/Scientific%20Calculator2.PNG" width="340">    <img src="https://github.com/OpeyemiOluwa12/ScientificCalculator/blob/master/src/scientificcalculator/casio-fx-82ms-original.jpeg" width="340">
+<img src ="https://github.com/OpeyemiOluwa12/ScientificCalculator/blob/master/src/scientificcalculator/images/Scientific%20Calculator2.PNG" width="340">    <img src="https://github.com/OpeyemiOluwa12/ScientificCalculator/blob/master/src/casio-fx-82ms-original.jpeg" width="340">
 
 
 
