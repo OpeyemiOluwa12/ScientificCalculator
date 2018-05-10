@@ -16,7 +16,7 @@ import javafx.stage.StageStyle;
 
 /**
  *
- * @author opeyemi
+ * @author Idris Opeyemi
  */
 public class ScientificCalculator extends Application {
 
@@ -35,6 +35,7 @@ public class ScientificCalculator extends Application {
         Font.loadFont(ScientificCalculator.class.getResource("digital-7.ttf").toExternalForm(), 10);
 
         Parent root = FXMLLoader.load(getClass().getResource("ScientificCalculator.fxml"));
+        System.out.println(root.toString());
         root.getStyleClass().add("anchorPane");
         Scene scene = new Scene(root);
         scene.setFill(Color.TRANSPARENT);

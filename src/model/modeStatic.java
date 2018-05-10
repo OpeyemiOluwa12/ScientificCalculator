@@ -3,11 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package scientificcalculator;
+package model;
 
 /**
  *
- * @author git
+ * @author Idris Opeyemi
  */
 public class modeStatic {
     private static String mode;
