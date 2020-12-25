@@ -10,8 +10,11 @@ import com.jfoenix.controls.JFXButton;
 import com.opeyemi.scientificcalculator.buttons.NumberButtons;
 import com.opeyemi.scientificcalculator.buttons.ScientificButtons;
 import com.opeyemi.scientificcalculator.model.CalculateType;
+import de.jensd.fx.glyphs.GlyphIcon;
+import de.jensd.fx.glyphs.GlyphsBuilder;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon;
-import de.jensd.fx.glyphs.fontawesome.utils.FontAwesomeIconFactory;
+import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
+//import de.jensd.fx.glyphs.fontawesome.utils.FontAwesomeIconFactory;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
@@ -124,13 +127,21 @@ public class ScientificCalculatorController implements Initializable {
         JFXButton left = new JFXButton();
 
         left.setButtonType(JFXButton.ButtonType.RAISED);
-        Text leftIcon = FontAwesomeIconFactory.get().createIcon(FontAwesomeIcon.CARET_LEFT, "20px");
+         GlyphIcon leftIcon = GlyphsBuilder.create(FontAwesomeIconView.class)
+                .glyph(FontAwesomeIcon.CARET_LEFT)
+                 .style("-fx-fill: DARKGREY")
+                .build();
+//        Text leftIcon = FontAwesomeIconFactory.get().createIcon(FontAwesomeIcon.CARET_LEFT, "20px");
         leftIcon.setFill(Color.DARKGREY);
         left.setGraphic(leftIcon);
 
         JFXButton right = new JFXButton();
         right.setButtonType(JFXButton.ButtonType.RAISED);
-        Text rightIcon = FontAwesomeIconFactory.get().createIcon(FontAwesomeIcon.CARET_RIGHT, "20px");
+        GlyphIcon rightIcon = GlyphsBuilder.create(FontAwesomeIconView.class)
+                .glyph(FontAwesomeIcon.CARET_RIGHT)
+                .style("-fx-fill: DARKGREY")
+                .build();
+//        Text rightIcon = FontAwesomeIconFactory.get().createIcon(FontAwesomeIcon.CARET_RIGHT, "20px");
         rightIcon.setFill(Color.DARKGREY);
         right.setGraphic(rightIcon);
 
@@ -142,7 +153,11 @@ public class ScientificCalculatorController implements Initializable {
 
         JFXButton top = new JFXButton();
         top.setButtonType(JFXButton.ButtonType.RAISED);
-        Text topIcon = FontAwesomeIconFactory.get().createIcon(FontAwesomeIcon.CARET_UP, "20px");
+        GlyphIcon topIcon = GlyphsBuilder.create(FontAwesomeIconView.class)
+                .glyph(FontAwesomeIcon.CARET_UP)
+                .style("-fx-fill: DARKGREY")
+                .build();
+//        Text topIcon = FontAwesomeIconFactory.get().createIcon(FontAwesomeIcon.CARET_UP, "20px");
         topIcon.setFill(Color.DARKGREY);
         top.setGraphic(topIcon);
         top.setOnAction((ev) -> {
@@ -151,7 +166,11 @@ public class ScientificCalculatorController implements Initializable {
 
         JFXButton down = new JFXButton();
         down.setButtonType(JFXButton.ButtonType.RAISED);
-        Text downIcon = FontAwesomeIconFactory.get().createIcon(FontAwesomeIcon.CARET_DOWN, "20px");
+        GlyphIcon downIcon = GlyphsBuilder.create(FontAwesomeIconView.class)
+                .glyph(FontAwesomeIcon.CARET_DOWN)
+                .style("-fx-fill: DARKGREY")
+                .build();
+//        Text downIcon = FontAwesomeIconFactory.get().createIcon(FontAwesomeIcon.CARET_DOWN, "20px");
         downIcon.setFill(Color.DARKGREY);
         down.setGraphic(downIcon);
         down.setOnAction((ev) -> {

@@ -9,7 +9,7 @@ package com.opeyemi.scientificcalculator.model;
  *
  * @author Idris Opeyemi
  */
-public class modeStatic {
+public class ModeStatic {
     private static String mode;
 
     public static String getMode() {
@@ -17,7 +17,7 @@ public class modeStatic {
     }
 
     public static void setMode(String mode) {
-        modeStatic.mode = mode;
+        ModeStatic.mode = mode;
     }
 
 }

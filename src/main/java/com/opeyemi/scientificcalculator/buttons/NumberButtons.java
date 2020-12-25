@@ -387,7 +387,7 @@ public class NumberButtons {
     public JFXButton del() {
         JFXButton del = new JFXButton();
 
-        ImageView delIcon = new ImageView(new Image(ScientificCalculator.class.getResource("delete.png").toExternalForm()));
+        ImageView delIcon = new ImageView(new Image(getClass().getResource("/images/delete.png").toExternalForm()));
         delIcon.setFitWidth(20);
         delIcon.setFitHeight(20);
         ColorAdjust white = new ColorAdjust();
