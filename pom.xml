@@ -30,12 +30,23 @@
             <artifactId>jfoenix</artifactId>
             <version>8.0.10</version>
         </dependency>
-
         <dependency>
             <groupId>de.jensd</groupId>
-            <artifactId>fontawesomefx-fontawesome</artifactId>
-            <version>4.7.0-9.1.2</version>
+            <artifactId>fontawesomefx</artifactId>
+            <version>8.9</version>
         </dependency>
+<!--        <dependency>-->
+<!--            <groupId>de.jensd</groupId>-->
+<!--            <artifactId>fontawesomefx-commons</artifactId>-->
+<!--            <version>8.15</version>-->
+<!--            <scope>runtime</scope>-->
+<!--        </dependency>-->
+
+<!--        <dependency>-->
+<!--            <groupId>de.jensd</groupId>-->
+<!--            <artifactId>fontawesomefx-fontawesome</artifactId>-->
+<!--            <version>4.6.3</version>-->
+<!--        </dependency>-->
 
     </dependencies>
 </project>

@@ -5,16 +5,16 @@
  */
 package com.opeyemi.scientificcalculator.buttons;
 
-import model.calculateType;
 import com.jfoenix.controls.JFXButton;
+import com.opeyemi.scientificcalculator.Screen;
+import com.opeyemi.scientificcalculator.Solve;
+import com.opeyemi.scientificcalculator.model.CalculateType;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.layout.HBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
-import scientificcalculator.Screen;
-import scientificcalculator.Solve;
 
 /**
  *
@@ -81,10 +81,10 @@ public class ScientificButtons {
         minusPower.setPrefWidth((row.getPrefWidth() / 3) / 3);
         minusPower.setPrefHeight(20);
         minusPower.setOnAction((ev) -> {
-            if (calculateType.getCalculated()) {
+            if (CalculateType.getCalculated()) {
                 Screen.getResult().setText("");
                 Screen.getTypeField().setText("");
-                calculateType.setCalculated(Boolean.FALSE);
+                CalculateType.setCalculated(Boolean.FALSE);
             }
             solve.solveFactorial();
             Screen.getTypeField().appendText("!");
@@ -101,17 +101,17 @@ public class ScientificButtons {
         comb.setPrefWidth((row.getPrefWidth() / 3) / 3);
         comb.setPrefHeight(20);
         comb.setOnAction((ev) -> {
-            if (calculateType.getCalculated()) {
+            if (CalculateType.getCalculated()) {
                 Screen.getResult().setText("");
                 Screen.getTypeField().setText("");
-                calculateType.setCalculated(Boolean.FALSE);
+                CalculateType.setCalculated(Boolean.FALSE);
             }
-            if (calculateType.getShifMode()) {
+            if (CalculateType.getShifMode()) {
                 Screen.getTypeField().appendText("P");
-                calculateType.setType("Permutation");
+                CalculateType.setType("Permutation");
             } else {
                 Screen.getTypeField().appendText("C");
-                calculateType.setType("Combination");
+                CalculateType.setType("Combination");
             }
         });
         return comb;
@@ -124,13 +124,13 @@ public class ScientificButtons {
         cbrt.setPrefWidth((row.getPrefWidth() / 3) / 3);
         cbrt.setPrefHeight(20);
         cbrt.setOnAction((ev) -> {
-            if (calculateType.getCalculated()) {
+            if (CalculateType.getCalculated()) {
                 Screen.getResult().setText("");
                 Screen.getTypeField().setText("");
-                calculateType.setCalculated(Boolean.FALSE);
+                CalculateType.setCalculated(Boolean.FALSE);
             }
             Screen.getTypeField().appendText("^3");
-            calculateType.setType("Normal");
+            CalculateType.setType("Normal");
         });
         return cbrt;
     }
@@ -143,14 +143,14 @@ public class ScientificButtons {
         pol.setPrefWidth((row.getPrefWidth() / 3) / 3);
         pol.setPrefHeight(20);
         pol.setOnAction((ev) -> {
-            if (calculateType.getCalculated()) {
+            if (CalculateType.getCalculated()) {
                 Screen.getResult().setText("");
                 Screen.getTypeField().setText("");
-                calculateType.setCalculated(Boolean.FALSE);
+                CalculateType.setCalculated(Boolean.FALSE);
             }
-            if (calculateType.getShifMode()) {
+            if (CalculateType.getShifMode()) {
                 Screen.getTypeField().appendText("∛");
-                calculateType.setType("Normal");
+                CalculateType.setType("Normal");
             } else {
 //                Screen.getTypeField().appendText("C");
 //                CalculateType.setType("Combination");
@@ -174,10 +174,10 @@ public class ScientificButtons {
         mixedFrac.setPrefWidth(row.getPrefWidth() / 6);
         mixedFrac.setPrefHeight(20);
         mixedFrac.setOnAction((ev) -> {
-            if (calculateType.getCalculated()) {
+            if (CalculateType.getCalculated()) {
                 Screen.getResult().setText("");
                 Screen.getTypeField().setText("");
-                calculateType.setCalculated(Boolean.FALSE);
+                CalculateType.setCalculated(Boolean.FALSE);
             }
 //            typeField.appendText("7");
         });
@@ -192,12 +192,12 @@ public class ScientificButtons {
         sqroot.setPrefWidth(row.getPrefWidth() / 6);
         sqroot.setPrefHeight(20);
         sqroot.setOnAction((ev) -> {
-            if (calculateType.getCalculated()) {
+            if (CalculateType.getCalculated()) {
                 Screen.getResult().setText("");
                 Screen.getTypeField().setText("");
-                calculateType.setCalculated(Boolean.FALSE);
+                CalculateType.setCalculated(Boolean.FALSE);
             }
-            calculateType.setType("Normal");
+            CalculateType.setType("Normal");
             Screen.getTypeField().appendText("√(");
         });
         return sqroot;
@@ -211,12 +211,12 @@ public class ScientificButtons {
         sqr.setPrefWidth(row.getPrefWidth() / 6);
         sqr.setPrefHeight(20);
         sqr.setOnAction((ev) -> {
-            if (calculateType.getCalculated()) {
+            if (CalculateType.getCalculated()) {
                 Screen.getResult().setText("");
                 Screen.getTypeField().setText("");
-                calculateType.setCalculated(Boolean.FALSE);
+                CalculateType.setCalculated(Boolean.FALSE);
             }
-            calculateType.setType("Normal");
+            CalculateType.setType("Normal");
             Screen.getTypeField().appendText("x^2");
         });
         return sqr;
@@ -229,12 +229,12 @@ public class ScientificButtons {
         caret.setPrefWidth(row.getPrefWidth() / 6);
         caret.setPrefHeight(20);
         caret.setOnAction((ev) -> {
-            if (calculateType.getCalculated()) {
+            if (CalculateType.getCalculated()) {
                 Screen.getResult().setText("");
                 Screen.getTypeField().setText("");
-                calculateType.setCalculated(Boolean.FALSE);
+                CalculateType.setCalculated(Boolean.FALSE);
             }
-            calculateType.setType("Normal");
+            CalculateType.setType("Normal");
             Screen.getTypeField().appendText("^");
         });
         return caret;
@@ -248,10 +248,10 @@ public class ScientificButtons {
         in.setPrefWidth(row.getPrefWidth() / 6);
         in.setPrefHeight(20);
         in.setOnAction((ev) -> {
-            if (calculateType.getCalculated()) {
+            if (CalculateType.getCalculated()) {
                 Screen.getResult().setText("");
                 Screen.getTypeField().setText("");
-                calculateType.setCalculated(Boolean.FALSE);
+                CalculateType.setCalculated(Boolean.FALSE);
             }
         });
         return in;
@@ -265,12 +265,12 @@ public class ScientificButtons {
         log.setPrefWidth(row.getPrefWidth() / 6);
         log.setPrefHeight(20);
         log.setOnAction((ev) -> {
-            if (calculateType.getCalculated()) {
+            if (CalculateType.getCalculated()) {
                 Screen.getResult().setText("");
                 Screen.getTypeField().setText("");
-                calculateType.setCalculated(Boolean.FALSE);
+                CalculateType.setCalculated(Boolean.FALSE);
             }
-            calculateType.setType("Scientific");
+            CalculateType.setType("Scientific");
             Screen.getTypeField().appendText("log(");
         });
         return log;
@@ -284,10 +284,10 @@ public class ScientificButtons {
         rcl.setPrefWidth(row.getPrefWidth() / 6);
         rcl.setPrefHeight(20);
         rcl.setOnAction((ev) -> {
-            if (calculateType.getCalculated()) {
+            if (CalculateType.getCalculated()) {
                 Screen.getResult().setText("");
                 Screen.getTypeField().setText("");
-                calculateType.setCalculated(Boolean.FALSE);
+                CalculateType.setCalculated(Boolean.FALSE);
             }
         });
         return rcl;
@@ -301,10 +301,10 @@ public class ScientificButtons {
         eng.setPrefWidth(row.getPrefWidth() / 6);
         eng.setPrefHeight(20);
         eng.setOnAction((ev) -> {
-            if (calculateType.getCalculated()) {
+            if (CalculateType.getCalculated()) {
                 Screen.getResult().setText("");
                 Screen.getTypeField().setText("");
-                calculateType.setCalculated(Boolean.FALSE);
+                CalculateType.setCalculated(Boolean.FALSE);
             }
         });
         return eng;
@@ -318,10 +318,10 @@ public class ScientificButtons {
         bracketOpen.setPrefWidth(row.getPrefWidth() / 6);
         bracketOpen.setPrefHeight(20);
         bracketOpen.setOnAction((ev) -> {
-            if (calculateType.getCalculated()) {
+            if (CalculateType.getCalculated()) {
                 Screen.getResult().setText("");
                 Screen.getTypeField().setText("");
-                calculateType.setCalculated(Boolean.FALSE);
+                CalculateType.setCalculated(Boolean.FALSE);
             }           
             Screen.getTypeField().appendText("(");
         });
@@ -336,10 +336,10 @@ public class ScientificButtons {
         bracketClosed.setPrefWidth(row.getPrefWidth() / 6);
         bracketClosed.setPrefHeight(20);
         bracketClosed.setOnAction((ev) -> {
-            if (calculateType.getCalculated()) {
+            if (CalculateType.getCalculated()) {
                 Screen.getResult().setText("");
                 Screen.getTypeField().setText("");
-                calculateType.setCalculated(Boolean.FALSE);
+                CalculateType.setCalculated(Boolean.FALSE);
             }
             Screen.getTypeField().appendText(")");
         });
@@ -354,10 +354,10 @@ public class ScientificButtons {
         coma.setPrefWidth(row.getPrefWidth() / 6);
         coma.setPrefHeight(20);
         coma.setOnAction((ev) -> {
-            if (calculateType.getCalculated()) {
+            if (CalculateType.getCalculated()) {
                 Screen.getResult().setText("");
                 Screen.getTypeField().setText("");
-                calculateType.setCalculated(Boolean.FALSE);
+                CalculateType.setCalculated(Boolean.FALSE);
             }
         });
         return coma;
@@ -371,10 +371,10 @@ public class ScientificButtons {
         mplus.setPrefWidth(row.getPrefWidth() / 6);
         mplus.setPrefHeight(20);
         mplus.setOnAction((ev) -> {
-            if (calculateType.getCalculated()) {
+            if (CalculateType.getCalculated()) {
                 Screen.getResult().setText("");
                 Screen.getTypeField().setText("");
-                calculateType.setCalculated(Boolean.FALSE);
+                CalculateType.setCalculated(Boolean.FALSE);
             }
         });
         return mplus;
@@ -388,10 +388,10 @@ public class ScientificButtons {
         hypen.setPrefWidth(row.getPrefWidth() / 6);
         hypen.setPrefHeight(20);
         hypen.setOnAction((ev) -> {
-            if (calculateType.getCalculated()) {
+            if (CalculateType.getCalculated()) {
                 Screen.getResult().setText("");
                 Screen.getTypeField().setText("");
-                calculateType.setCalculated(Boolean.FALSE);
+                CalculateType.setCalculated(Boolean.FALSE);
             }
         });
         return hypen;
@@ -405,10 +405,10 @@ public class ScientificButtons {
         dot.setPrefWidth(row.getPrefWidth() / 6);
         dot.setPrefHeight(20);
         dot.setOnAction((ev) -> {
-            if (calculateType.getCalculated()) {
+            if (CalculateType.getCalculated()) {
                 Screen.getResult().setText("");
                 Screen.getTypeField().setText("");
-                calculateType.setCalculated(Boolean.FALSE);
+                CalculateType.setCalculated(Boolean.FALSE);
             }
         });
         return dot;
@@ -422,10 +422,10 @@ public class ScientificButtons {
         hyp.setPrefWidth(row.getPrefWidth() / 6);
         hyp.setPrefHeight(20);
         hyp.setOnAction((ev) -> {
-            if (calculateType.getCalculated()) {
+            if (CalculateType.getCalculated()) {
                 Screen.getResult().setText("");
                 Screen.getTypeField().setText("");
-                calculateType.setCalculated(Boolean.FALSE);
+                CalculateType.setCalculated(Boolean.FALSE);
             }
         });
         return hyp;
@@ -439,13 +439,13 @@ public class ScientificButtons {
         sin.setPrefWidth(row.getPrefWidth() / 6);
         sin.setPrefHeight(20);
         sin.setOnAction((ev) -> {
-            if (calculateType.getCalculated()) {
+            if (CalculateType.getCalculated()) {
                 Screen.getResult().setText("");
                 Screen.getTypeField().setText("");
-                calculateType.setCalculated(Boolean.FALSE);
+                CalculateType.setCalculated(Boolean.FALSE);
             }
-            calculateType.setType("Scientific");
-            if (calculateType.getShifMode()) {
+            CalculateType.setType("Scientific");
+            if (CalculateType.getShifMode()) {
                 Screen.getTypeField().appendText("sin-1(");
             } else {
                 Screen.getTypeField().appendText("sin(");
@@ -462,13 +462,13 @@ public class ScientificButtons {
         tan.setPrefWidth(row.getPrefWidth() / 6);
         tan.setPrefHeight(20);
         tan.setOnAction((ev) -> {
-            if (calculateType.getCalculated()) {
+            if (CalculateType.getCalculated()) {
                 Screen.getResult().setText("");
                 Screen.getTypeField().setText("");
-                calculateType.setCalculated(Boolean.FALSE);
+                CalculateType.setCalculated(Boolean.FALSE);
             }
-            calculateType.setType("Scientific");
-            if (calculateType.getShifMode()) {
+            CalculateType.setType("Scientific");
+            if (CalculateType.getShifMode()) {
                 Screen.getTypeField().appendText("sin-1(");
             } else {
                 Screen.getTypeField().appendText("sin(");
@@ -485,13 +485,13 @@ public class ScientificButtons {
         cos.setPrefWidth(row.getPrefWidth() / 6);
         cos.setPrefHeight(20);
         cos.setOnAction((ev) -> {
-            if (calculateType.getCalculated()) {
+            if (CalculateType.getCalculated()) {
                 Screen.getResult().setText("");
                 Screen.getTypeField().setText("");
-                calculateType.setCalculated(Boolean.FALSE);
+                CalculateType.setCalculated(Boolean.FALSE);
             }
-            calculateType.setType("Scientific");
-            if (calculateType.getShifMode()) {
+            CalculateType.setType("Scientific");
+            if (CalculateType.getShifMode()) {
                 Screen.getTypeField().appendText("cos-1(");
             } else {
                 Screen.getTypeField().appendText("cos(");

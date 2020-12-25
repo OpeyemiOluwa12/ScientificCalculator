@@ -32,9 +32,9 @@ public class ScientificCalculator extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Font.loadFont(ScientificCalculator.class.getResource("digital-7.ttf").toExternalForm(), 10);
+        Font.loadFont(getClass().getResource("/font/digital-7.ttf").toExternalForm(), 10);
 
-        Parent root = FXMLLoader.load(getClass().getResource("../../../../resources/fxml/ScientificCalculator.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/ScientificCalculator.fxml"));
         System.out.println(root.toString());
         root.getStyleClass().add("anchorPane");
         Scene scene = new Scene(root);
