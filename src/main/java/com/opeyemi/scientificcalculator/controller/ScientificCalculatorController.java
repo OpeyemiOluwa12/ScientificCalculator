@@ -3,12 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package scientificcalculator;
+package com.opeyemi.scientificcalculator.controller;
 
-import scientificcalculator.buttons.ScientificButtons;
-import scientificcalculator.buttons.NumberButtons;
-import model.calculateType;
+import com.opeyemi.scientificcalculator.Screen;
 import com.jfoenix.controls.JFXButton;
+import com.opeyemi.scientificcalculator.buttons.NumberButtons;
+import com.opeyemi.scientificcalculator.buttons.ScientificButtons;
+import com.opeyemi.scientificcalculator.model.CalculateType;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon;
 import de.jensd.fx.glyphs.fontawesome.utils.FontAwesomeIconFactory;
 import java.net.URL;
@@ -49,7 +50,7 @@ public class ScientificCalculatorController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
 //        System.out.println(Math.IEEEremainder(7, 3));
 //        System.out.println(Math.);
-        calculateType.setType("Normal");
+        CalculateType.setType("Normal");
         panel();
     }
 
@@ -207,11 +208,11 @@ public class ScientificCalculatorController implements Initializable {
         shift.setPrefWidth(shiftAlpha.getPrefWidth() / 3);
         shift.setOnAction((ev) -> {
             if (shift.getStyleClass().contains("modeColor")) {
-                calculateType.setShifMode(Boolean.TRUE);
+                CalculateType.setShifMode(Boolean.TRUE);
                 shift.getStyleClass().remove("modeColor");
                 shift.getStyleClass().add("shiftModeColor");
             } else if (shift.getStyleClass().contains("shiftModeColor")) {
-                calculateType.setShifMode(Boolean.FALSE);
+                CalculateType.setShifMode(Boolean.FALSE);
                 shift.getStyleClass().remove("shiftModeColor");
                 shift.getStyleClass().add("modeColor");
             }

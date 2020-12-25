@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package scientificcalculator;
+package com.opeyemi.scientificcalculator;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -34,7 +34,7 @@ public class ScientificCalculator extends Application {
     public void start(Stage primaryStage) throws Exception {
         Font.loadFont(ScientificCalculator.class.getResource("digital-7.ttf").toExternalForm(), 10);
 
-        Parent root = FXMLLoader.load(getClass().getResource("ScientificCalculator.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("../../../../resources/fxml/ScientificCalculator.fxml"));
         System.out.println(root.toString());
         root.getStyleClass().add("anchorPane");
         Scene scene = new Scene(root);

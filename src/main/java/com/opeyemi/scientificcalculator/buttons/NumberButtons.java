@@ -3,10 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package scientificcalculator.buttons;
+package com.opeyemi.scientificcalculator.buttons;
 
-import model.calculateType;
 import com.jfoenix.controls.JFXButton;
+import com.opeyemi.scientificcalculator.ScientificCalculator;
+import com.opeyemi.scientificcalculator.Screen;
+import com.opeyemi.scientificcalculator.Solve;
+import com.opeyemi.scientificcalculator.model.CalculateType;
 import javafx.geometry.Insets;
 import javafx.scene.CacheHint;
 import javafx.scene.control.ContentDisplay;
@@ -15,9 +18,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 import javafx.scene.paint.Color;
-import scientificcalculator.ScientificCalculator;
-import scientificcalculator.Screen;
-import scientificcalculator.Solve;
+
 
 /**
  *
@@ -85,10 +86,10 @@ public class NumberButtons {
         zero.setPrefWidth(row1.getPrefWidth() / 5);
         zero.setPrefHeight(25);
         zero.setOnAction((ev) -> {
-            if (calculateType.getCalculated()) {
+            if (CalculateType.getCalculated()) {
                 Screen.getResult().setText("");
                 Screen.getTypeField().setText("");
-                calculateType.setCalculated(Boolean.FALSE);
+                CalculateType.setCalculated(Boolean.FALSE);
             }
             Screen.getTypeField().appendText("0");
         });
@@ -103,10 +104,10 @@ public class NumberButtons {
         one.setPrefWidth(row1.getPrefWidth() / 5);
         one.setPrefHeight(25);
         one.setOnAction((ev) -> {
-            if (calculateType.getCalculated()) {
+            if (CalculateType.getCalculated()) {
                 Screen.getResult().setText("");
                 Screen.getTypeField().setText("");
-                calculateType.setCalculated(Boolean.FALSE);
+                CalculateType.setCalculated(Boolean.FALSE);
             }
             Screen.getTypeField().appendText("1");
         });
@@ -121,10 +122,10 @@ public class NumberButtons {
         two.setPrefWidth(row1.getPrefWidth() / 5);
         two.setPrefHeight(25);
         two.setOnAction((ev) -> {
-            if (calculateType.getCalculated()) {
+            if (CalculateType.getCalculated()) {
                 Screen.getResult().setText("");
                 Screen.getTypeField().setText("");
-                calculateType.setCalculated(Boolean.FALSE);
+                CalculateType.setCalculated(Boolean.FALSE);
             }
             Screen.getTypeField().appendText("2");
         });
@@ -139,10 +140,10 @@ public class NumberButtons {
         three.setPrefWidth(row1.getPrefWidth() / 5);
         three.setPrefHeight(25);
         three.setOnAction((ev) -> {
-            if (calculateType.getCalculated()) {
+            if (CalculateType.getCalculated()) {
                 Screen.getResult().setText("");
                 Screen.getTypeField().setText("");
-                calculateType.setCalculated(Boolean.FALSE);
+                CalculateType.setCalculated(Boolean.FALSE);
             }
             Screen.getTypeField().appendText("3");
         });
@@ -157,10 +158,10 @@ public class NumberButtons {
         four.setPrefWidth(row1.getPrefWidth() / 5);
         four.setPrefHeight(25);
         four.setOnAction((ev) -> {
-            if (calculateType.getCalculated()) {
+            if (CalculateType.getCalculated()) {
                 Screen.getResult().setText("");
                 Screen.getTypeField().setText("");
-                calculateType.setCalculated(Boolean.FALSE);
+                CalculateType.setCalculated(Boolean.FALSE);
             }
             Screen.getTypeField().appendText("4");
         });
@@ -175,10 +176,10 @@ public class NumberButtons {
         five.setPrefWidth(row1.getPrefWidth() / 5);
         five.setPrefHeight(25);
         five.setOnAction((ev) -> {
-            if (calculateType.getCalculated()) {
+            if (CalculateType.getCalculated()) {
                 Screen.getResult().setText("");
                 Screen.getTypeField().setText("");
-                calculateType.setCalculated(Boolean.FALSE);
+                CalculateType.setCalculated(Boolean.FALSE);
             }
             Screen.getTypeField().appendText("5");
         });
@@ -193,10 +194,10 @@ public class NumberButtons {
         six.setPrefWidth(row1.getPrefWidth() / 5);
         six.setPrefHeight(25);
         six.setOnAction((ev) -> {
-            if (calculateType.getCalculated()) {
+            if (CalculateType.getCalculated()) {
                 Screen.getResult().setText("");
                 Screen.getTypeField().setText("");
-                calculateType.setCalculated(Boolean.FALSE);
+                CalculateType.setCalculated(Boolean.FALSE);
             }
             Screen.getTypeField().appendText("6");
         });
@@ -211,10 +212,10 @@ public class NumberButtons {
         seven.setPrefWidth(row1.getPrefWidth() / 5);
         seven.setPrefHeight(25);
         seven.setOnAction((ev) -> {
-            if (calculateType.getCalculated()) {
+            if (CalculateType.getCalculated()) {
                 Screen.getResult().setText("");
                 Screen.getTypeField().setText("");
-                calculateType.setCalculated(Boolean.FALSE);
+                CalculateType.setCalculated(Boolean.FALSE);
             }
             Screen.getTypeField().appendText("7");
         });
@@ -229,10 +230,10 @@ public class NumberButtons {
         eight.setPrefWidth(row1.getPrefWidth() / 5);
         eight.setPrefHeight(25);
         eight.setOnAction((ev) -> {
-            if (calculateType.getCalculated()) {
+            if (CalculateType.getCalculated()) {
                 Screen.getResult().setText("");
                 Screen.getTypeField().setText("");
-                calculateType.setCalculated(Boolean.FALSE);
+                CalculateType.setCalculated(Boolean.FALSE);
             }
             Screen.getTypeField().appendText("8");
         });
@@ -247,10 +248,10 @@ public class NumberButtons {
         nine.setPrefWidth(row1.getPrefWidth() / 5);
         nine.setPrefHeight(25);
         nine.setOnAction((ev) -> {
-            if (calculateType.getCalculated()) {
+            if (CalculateType.getCalculated()) {
                 Screen.getResult().setText("");
                 Screen.getTypeField().setText("");
-                calculateType.setCalculated(Boolean.FALSE);
+                CalculateType.setCalculated(Boolean.FALSE);
             }
             Screen.getTypeField().appendText("9");
         });
@@ -265,10 +266,10 @@ public class NumberButtons {
         point.setPrefWidth(row1.getPrefWidth() / 5);
         point.setPrefHeight(25);
         point.setOnAction((ev) -> {
-            if (calculateType.getCalculated()) {
+            if (CalculateType.getCalculated()) {
                 Screen.getResult().setText("");
                 Screen.getTypeField().setText("");
-                calculateType.setCalculated(Boolean.FALSE);
+                CalculateType.setCalculated(Boolean.FALSE);
             }
             Screen.getTypeField().appendText(".");
         });
@@ -283,10 +284,10 @@ public class NumberButtons {
         plus.setPrefWidth(row1.getPrefWidth() / 5);
         plus.setPrefHeight(25);
         plus.setOnAction((ev) -> {
-            if (calculateType.getCalculated()) {
+            if (CalculateType.getCalculated()) {
                 Screen.getTypeField().setText(Screen.getResult().getText());
                 Screen.getResult().setText("");
-                calculateType.setCalculated(Boolean.FALSE);
+                CalculateType.setCalculated(Boolean.FALSE);
             }
             Screen.getTypeField().appendText("+");
         });
@@ -301,10 +302,10 @@ public class NumberButtons {
         minus.setPrefWidth(row1.getPrefWidth() / 5);
         minus.setPrefHeight(25);
         minus.setOnAction((ev) -> {
-            if (calculateType.getCalculated()) {
+            if (CalculateType.getCalculated()) {
                 Screen.getTypeField().setText(Screen.getResult().getText());
                 Screen.getResult().setText("");
-                calculateType.setCalculated(Boolean.FALSE);
+                CalculateType.setCalculated(Boolean.FALSE);
             }
             Screen.getTypeField().appendText("-");
         });
@@ -319,10 +320,10 @@ public class NumberButtons {
         multiply.setPrefWidth(row1.getPrefWidth() / 5);
         multiply.setPrefHeight(25);
         multiply.setOnAction((ev) -> {
-            if (calculateType.getCalculated()) {
+            if (CalculateType.getCalculated()) {
                 Screen.getTypeField().setText(Screen.getResult().getText());
                 Screen.getResult().setText("");
-                calculateType.setCalculated(Boolean.FALSE);
+                CalculateType.setCalculated(Boolean.FALSE);
             }
             Screen.getTypeField().appendText("×");
         });
@@ -337,10 +338,10 @@ public class NumberButtons {
         divide.setPrefWidth(row1.getPrefWidth() / 5);
         divide.setPrefHeight(25);
         divide.setOnAction((ev) -> {
-            if (calculateType.getCalculated()) {
+            if (CalculateType.getCalculated()) {
                 Screen.getTypeField().setText(Screen.getResult().getText());
                 Screen.getResult().setText("");
-                calculateType.setCalculated(Boolean.FALSE);
+                CalculateType.setCalculated(Boolean.FALSE);
             }
             Screen.getTypeField().appendText("÷");
         });
@@ -355,10 +356,10 @@ public class NumberButtons {
         exp.setPrefWidth(row1.getPrefWidth() / 5);
         exp.setPrefHeight(25);
         exp.setOnAction((ev) -> {
-            if (calculateType.getCalculated()) {
+            if (CalculateType.getCalculated()) {
                 Screen.getResult().setText("");
                 Screen.getTypeField().setText("");
-                calculateType.setCalculated(Boolean.FALSE);
+                CalculateType.setCalculated(Boolean.FALSE);
             }
 //            Screen.getTypeField().appendText("exp");
         });
@@ -373,10 +374,10 @@ public class NumberButtons {
         ans.setPrefWidth(row1.getPrefWidth() / 5);
         ans.setPrefHeight(25);
         ans.setOnAction((ev) -> {
-            if (calculateType.getCalculated()) {
+            if (CalculateType.getCalculated()) {
                 Screen.getResult().setText("");
                 Screen.getTypeField().setText("");
-                calculateType.setCalculated(Boolean.FALSE);
+                CalculateType.setCalculated(Boolean.FALSE);
             }
 //            Screen.getTypeField().appendText("Ans");
         });
@@ -403,10 +404,10 @@ public class NumberButtons {
         del.setPrefWidth(row1.getPrefWidth() / 5);
         del.setPrefHeight(25);
         del.setOnAction((ev) -> {
-            if (calculateType.getCalculated()) {
+            if (CalculateType.getCalculated()) {
                 Screen.getResult().setText("");
                 Screen.getTypeField().setText("");
-                calculateType.setCalculated(Boolean.FALSE);
+                CalculateType.setCalculated(Boolean.FALSE);
             }
             Screen.getTypeField().setText(Screen.getTypeField().getText().toString().substring(0, Screen.getTypeField().getText().length() - 1));
         });
@@ -423,7 +424,7 @@ public class NumberButtons {
         ac.setOnAction((ev) -> {
             Screen.getResult().setText("");
             Screen.getTypeField().setText("");
-            calculateType.setCalculated(Boolean.FALSE);
+            CalculateType.setCalculated(Boolean.FALSE);
         });
         return ac;
     }
@@ -437,13 +438,13 @@ public class NumberButtons {
         equals.setPrefWidth(row1.getPrefWidth() / 5);
         equals.setPrefHeight(25);
         equals.setOnAction((ev) -> {
-            if (calculateType.getCalculated()) {
-                calculateType.setCalculated(Boolean.FALSE);
+            if (CalculateType.getCalculated()) {
+                CalculateType.setCalculated(Boolean.FALSE);
             }
-            if (calculateType.getShifMode()) {
+            if (CalculateType.getShifMode()) {
                 Screen.getTypeField().appendText("%");
             } else if (!Screen.getTypeField().getText().equals("")) {
-                switch (calculateType.getType()) {
+                switch (CalculateType.getType()) {
                     case "Scientific":
                         Screen.getToCalculate().add(Screen.getTypeField().getText().trim());
                         calculateSolve.solveScientific();
