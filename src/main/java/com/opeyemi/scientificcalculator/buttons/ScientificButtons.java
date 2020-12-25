@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package scientificcalculator.buttons;
+package com.opeyemi.scientificcalculator.buttons;
 
 import model.calculateType;
 import com.jfoenix.controls.JFXButton;
@@ -153,7 +153,7 @@ public class ScientificButtons {
                 calculateType.setType("Normal");
             } else {
 //                Screen.getTypeField().appendText("C");
-//                calculateType.setType("Combination");
+//                CalculateType.setType("Combination");
             }
         });
         return pol;

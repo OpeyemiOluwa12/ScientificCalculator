@@ -1,0 +1,11 @@
+<component name="CopyrightManager">
+  <settings default="Copyright_Notice">
+    <module2copyright>
+      <element module="All" copyright="Copyright_Notice" />
+    </module2copyright>
+    <LanguageOptions name="JAVA">
+      <option name="fileTypeOverride" value="3" />
+      <option name="fileLocation" value="2" />
+    </LanguageOptions>
+  </settings>
+</component>

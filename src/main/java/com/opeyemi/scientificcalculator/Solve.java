@@ -3,15 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package scientificcalculator;
+package com.opeyemi.scientificcalculator;
 
-import model.calculateType;
+import com.opeyemi.scientificcalculator.model.CalculateType;
+
 import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
 import javax.script.ScriptException;
 
 /**
- *
  * @author Idris Opeyemi
  */
 public class Solve {
@@ -73,12 +73,12 @@ public class Solve {
             Object answer = engine.eval(calculate);
             Screen.getResultList().add(answer.toString());
             Screen.getResult().setText(answer.toString());
-            calculateType.setCalculated(Boolean.TRUE);
+            CalculateType.setCalculated(Boolean.TRUE);
         } catch (ScriptException e) {
             // Something went wrong
             Screen.getResultList().add("SYNTAX ERROR");
             Screen.getResult().setText("SYNTAX ERROR");
-            calculateType.setCalculated(Boolean.TRUE);
+            CalculateType.setCalculated(Boolean.TRUE);
             e.printStackTrace();
         }
     }
@@ -115,13 +115,13 @@ public class Solve {
             Object answer = engine.eval(calculate);
             Screen.getResultList().add(answer.toString());
             Screen.getResult().setText(answer.toString());
-            calculateType.setCalculated(Boolean.TRUE);
-            calculateType.setType("Normal");
+            CalculateType.setCalculated(Boolean.TRUE);
+            CalculateType.setType("Normal");
         } catch (ScriptException e) {
             // Something went wrong
             Screen.getResultList().add("SYNTAX ERROR");
             Screen.getResult().setText("SYNTAX ERROR");
-            calculateType.setCalculated(Boolean.TRUE);
+            CalculateType.setCalculated(Boolean.TRUE);
             e.printStackTrace();
         }
     }
@@ -152,13 +152,13 @@ public class Solve {
             Object answer = engine.eval(calculate);
             Screen.getResultList().add(answer.toString());
             Screen.getResult().setText(answer.toString());
-            calculateType.setCalculated(Boolean.TRUE);
-            calculateType.setType("Normal");
+            CalculateType.setCalculated(Boolean.TRUE);
+            CalculateType.setType("Normal");
         } catch (ScriptException e) {
             // Something went wrong
             Screen.getResultList().add("SYNTAX ERROR");
             Screen.getResult().setText("SYNTAX ERROR");
-            calculateType.setCalculated(Boolean.TRUE);
+            CalculateType.setCalculated(Boolean.TRUE);
             e.printStackTrace();
         }
     }
@@ -167,7 +167,7 @@ public class Solve {
         int fac = Integer.parseInt(Screen.getTypeField().getText());
         fac = factorial(fac);
         Screen.getResult().setText("" + fac);
-        calculateType.setCalculated(Boolean.TRUE);
+        CalculateType.setCalculated(Boolean.TRUE);
         Screen.getResultList().add(fac + "");
     }
 
@@ -187,7 +187,7 @@ public class Solve {
         int nMinusRFactorial = factorial(nValue - rValue);
         int comb = nFactorial / (rFactorial * (nMinusRFactorial));
         Screen.getResultList().add(comb + "");
-        calculateType.setCalculated(Boolean.TRUE);
+        CalculateType.setCalculated(Boolean.TRUE);
         Screen.getResult().setText("" + comb);
 
     }
@@ -200,7 +200,7 @@ public class Solve {
         int nMinusRFactorial = factorial(nValue - rValue);
         int perm = nFactorial / (nMinusRFactorial);
         Screen.getResultList().add(perm + "");
-        calculateType.setCalculated(Boolean.TRUE);
+        CalculateType.setCalculated(Boolean.TRUE);
         Screen.getResult().setText("" + perm);
 
     }

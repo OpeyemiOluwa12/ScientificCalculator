@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package model;
+package com.opeyemi.scientificcalculator.model;
 
 /**
  *
  * @author Idris Opeyemi
  */
-public class calculateType {
+public class CalculateType {
     private static String type;
     private static Boolean calculated = false;
     private static Boolean shifMode = false;
@@ -19,7 +19,7 @@ public class calculateType {
     }
 
     public static void setType(String type) {
-        calculateType.type = type;
+        CalculateType.type = type;
     }
 
     public static Boolean getCalculated() {
@@ -27,7 +27,7 @@ public class calculateType {
     }
 
     public static void setCalculated(Boolean calculated) {
-        calculateType.calculated = calculated;
+        CalculateType.calculated = calculated;
     }
 
     public static Boolean getShifMode() {
@@ -35,7 +35,7 @@ public class calculateType {
     }
 
     public static void setShifMode(Boolean shifMode) {
-        calculateType.shifMode = shifMode;
+        CalculateType.shifMode = shifMode;
     }
     
 }
